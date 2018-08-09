@@ -15,3 +15,12 @@
 
 <label for="alias">alias</label>
 <input type="text" name="alias" id="alias" class="fancy_form" >
+
+
+<% values = ["email", "username", "pin", "website", "address", "alias" %>
+
+<%= values.each do |value| %>
+  <label for="<%= value %>"><%= value %></label>
+  <input type="text" name="<%= value %>" id="<%= value %>" class="fancy_form">
+
+<% end %>
